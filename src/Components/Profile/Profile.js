@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import s from './Profile.module.css';
-const Profile = ({ username, avatar, tag, location, stats }) => (
 
+const Profile = ({ username, avatar, tag, location, stats }) => (
   <div className={s.profile}>
     <div className="description">
       <img

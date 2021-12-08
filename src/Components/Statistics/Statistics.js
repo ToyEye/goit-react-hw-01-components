@@ -7,7 +7,6 @@ function getRandomColor() {
     return '#000000'.slice(0, -color.length) + color;
 }
 
-
 const Statistics = ({ title, stats }) => (
     <section className={s.statistics}>
         <h2 className={s.title}>{title}</h2>
@@ -22,13 +21,6 @@ const Statistics = ({ title, stats }) => (
         </ul>
      </section>
 )
-
-// style={{
-//       ...buttonStyles,
-//       backgroundColor: disabled ? '#0000001f' : '#2196f3',
-//       color: disabled ? '#00000042' : '#ffffff',
-//     }}
-
 
 Statistics.defaultProps = {
     title: ''

@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import s from "./FriendList.module.css";
 
-
 function friendOnline(status) {
   if (status) {
     return s.online;
