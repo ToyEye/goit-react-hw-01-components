@@ -1,0 +1,40 @@
+.statistics {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.title {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+
+  border-top: 1px solid black;
+  width: 60px;
+  height: 60px;
+}
+
+.item:not(:last-child) {
+  border-right: 1px solid black;
+}
+
+.statList {
+  display: flex;
+}
+
+.label {
+  padding-left: 10px;
+  padding-right: 10px;
+}
