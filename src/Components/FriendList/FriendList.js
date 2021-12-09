@@ -22,9 +22,11 @@ const FriendList = ({ friends }) => (
 );
 
 FriendList.prototype = {
+  friends:PropTypes.arrayOf(PropTypes.shape({
     avatar: PropTypes.string,
     name: PropTypes.string,
     id:PropTypes.number.isRequired,
+  }))
 }
 
 export default FriendList;
