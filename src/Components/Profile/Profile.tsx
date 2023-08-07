@@ -1,15 +1,23 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import s from './Profile.module.css';
+import s from "./Profile.module.css";
 
-const Profile = ({ username, avatar, tag, location, stats }) => (
+type TStats = {
+  followers: number;
+  views: number;
+  likes: number;
+};
+
+type TUser = {
+  username: string;
+  tag: string;
+  location: string;
+  avatar: string;
+  stats: TStats;
+};
+
+const Profile = ({ username, avatar, tag, location, stats }: TUser) => (
   <div className={s.profile}>
     <div className="description">
-      <img
-        src={avatar}
-        alt={username}
-        className={s.avatar}
-      />
+      <img src={avatar} alt={username} className={s.avatar} />
       <p className={s.name}>{username}</p>
       <p className={s.text}>@{tag}</p>
       <p className={s.text}>{location}</p>
@@ -31,15 +39,5 @@ const Profile = ({ username, avatar, tag, location, stats }) => (
     </ul>
   </div>
 );
-
-Profile.propTypes = {
-  username: PropTypes.string.isRequired,
-  tag: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  followers: PropTypes.number,
-  views: PropTypes.number,
-  likes:PropTypes.number,
-}
-
 
 export default Profile;
